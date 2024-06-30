@@ -1,0 +1,116 @@
+.input-holder{
+   min-width: 100vw;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.input-Bar{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 4px;
+    width: 50%;
+    font-size: 15px;
+    background-color: rgb(21, 21, 59);
+    color: white;
+}
+button {
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.5em 1.4em;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  color: rgb(46, 161, 71);
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+button span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 2px solid rgb(46, 161, 71);
+}
+
+button span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: var(--lightgray);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.3s;
+}
+
+button:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: rgb(46, 171, 72);
+}
+
+button:hover {
+  color: white;
+}
+
+button:active span::before {
+  background: #2751cd;
+}
+
+@media screen and (max-width:1024px) {
+  .input-Bar{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .btn{
+    width: 100px;
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .btn{
+    width: 70px;
+    font-size: 13px;
+    padding: 5px;
+    
+  }
+}
+
+@media screen and (max-width:370px) {
+  .input-Bar{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .input-holder{
+    flex-direction: column;
+  }
+  .input-Bar{
+    width: 95%;
+  }
+  .btn{
+    width: 90%;
+    font-size: 15px;
+  }
+  .span{
+    min-width: 100vw;
+  }
+}

@@ -1,0 +1,127 @@
+
+.item-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.all-holder{
+    display: flex;
+    gap: 20px;
+    width: 60%;
+    background-color: rgb(253, 220, 225);
+    border-radius: 8px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    height: fit-content;
+}
+.li-check-holder{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+.checkBox{
+    margin-top: -5px;
+}
+.first-item{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    width: 100%;
+    /* padding-bottom: 2px; */
+    font-size: 17px;
+    /* padding: 5px 5px 7px 5px; */
+    border-radius: 4px;
+    /* height: 20px; */
+    resize: none;
+    overflow: visible;
+    margin-bottom: -10px;
+}
+.edit-item{
+    border: 1px solid rgb(249, 149, 166);
+}
+
+.icon-button{
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all ease-in-out .3s;
+}
+.emoji-holder{
+    display: flex;
+    gap: 10px;
+}
+.icon-button:hover{
+    background-color: gainsboro;
+}
+.icon-cross:hover{
+    transform: rotate(360deg);
+}
+.icon-pencil:hover{
+    transform: rotateY(180deg);
+}
+
+.complete{
+    background-color: rgb(152, 212, 152);
+    >.li-check-holder
+    >.first-item{
+        text-decoration: line-through;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .all-holder{
+        width: 81%;
+    }
+  }
+  
+  
+  
+  @media screen and (max-width:450px) {
+    .icon-button{
+        font-size: 12px;
+        width: 25px;
+        height: 25px;
+        border-radius: 4px;
+    }
+  }
+  
+  @media screen and (max-width:370px) {
+    .all-holder{
+        width: 90%;
+    }
+    .first-item{
+        font-size: 15px;
+    }
+  }
+  
+  @media screen and (max-width:320px) {
+    .all-holder{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .emoji-holder{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .icon-button{
+        width: 40%;
+        font-size: 15px;
+    }
+    .first-item{
+        /* text-align: center; */
+        font-size: 17px;
+    }
+  }
